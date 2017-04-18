@@ -18,13 +18,14 @@
 # 标记方式
 
 * 节点标识符：
-    id='{"edaice-obj": attrName}'       // 主对象节点 attrName是自定义属性名 
+
+    * id='{"edaice-obj": attrName}'       // 主对象节点 attrName是自定义属性名 
     => 如: 个人信息、工作经验、项目经验等（注意：必须包裹从对象节点）
 
-    id='{"edaice-obj-item": attrName}' // 从对象节点 attrName是自定义属性名 
+    * id='{"edaice-obj-item": attrName}' // 从对象节点 attrName是自定义属性名 
     => 如：'年龄'、'婚姻状况'等从属于'个人信息'节点；'在职时间'、'岗位'、'工作描述'等从属于'工作经验'
 
-    id='{"edaice-obj":"breakpoint"}'    // 列表分割节点 固定使用"breakpoint"属性名 
+    * id='{"edaice-obj":"breakpoint"}'    // 列表分割节点 固定使用"breakpoint"属性名 
     => 如： 工作经验有多个，此时需要标识从哪里作为分割点（注意：尽量放在与子节点不同的节点上） 
 
 * 节点标识例子：
@@ -132,11 +133,14 @@
 
 # 使用方式(以下以新增猎聘渠道为例)
     => 将标记后的模板html以渠道名的方式命名（liepin.html）并放入 './config/template'下
+
     => 在'./test'目录下新建以渠道名命名的目录，并放入测试文件
+
     => 使用VScode打开 htmlParser.py，修改最下方的 testFilePath 和 htmlType
         例如新增猎聘渠道 liepin
         testFilePath = './test/liepin/test.html'
         htmlType = 'liepin'
+
     => 运行 htmlParser.py，根据需要编辑'./config/liepin.json'，添加正则或填写需去除的指定文字
         例如 岗位名称这个字段：
         ```
@@ -147,4 +151,5 @@
             "replace": "职　位："                                   //  这是去除指定的文字，此处去除 '职　位：'
         }
         ```
+
     => 运行 htmlParser.py，打开'./test/resumeData.json'，查看提取结果
