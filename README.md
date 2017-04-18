@@ -19,11 +19,8 @@
 
 * 节点标识符：
 
-    * id='{"edaice-obj": attrName}'       // 主对象节点 attrName是自定义属性名 
-    => 如: 个人信息、工作经验、项目经验等（注意：必须包裹从对象节点）
-
-    * id='{"edaice-obj-item": attrName}' // 从对象节点 attrName是自定义属性名 
-    => 如：'年龄'、'婚姻状况'等从属于'个人信息'节点；'在职时间'、'岗位'、'工作描述'等从属于'工作经验'
+    * id='{"edaice-obj": attrName}'       // 对象节点 attrName是自定义属性名 可互相嵌套
+    => 如: 个人信息、工作经验、项目经验等主对象节点；'年龄'、'婚姻状况'等从属于'个人信息'的从对象节点；
 
     * id='{"edaice-obj":"breakpoint"}'    // 列表分割节点 固定使用"breakpoint"属性名 
     => 如： 工作经验有多个，此时需要标识从哪里作为分割点（注意：尽量放在与子节点不同的节点上） 
@@ -34,12 +31,12 @@
         <tbody>
             <tr>
                 <td>最近工作（3个月）</td>
-                <tr id='{"edaice-obj-item":"jobtitle"}'>
+                <tr id='{"edaice-obj":"jobtitle"}'>
                     <td>职　位：</td>
                     <td>算法工程师</td>
                 </tr>
             </tr>
-            <tr id='{"edaice-obj-item":"company"}'>
+            <tr id='{"edaice-obj":"company"}'>
                 <td>公　司：</td>
                 <td>智久机器人科技有限公司</td>
             </tr>
@@ -76,14 +73,14 @@
             <td>
                 <table id='{"edaice-obj":"breakpoint"}'>
                     <tr>
-                        <td id='{"edaice-obj-item":"time"}'>2016/9-2016/12</td>
-                        <td><strong id='{"edaice-obj-item":"name"}'>AGV叉车无人驾驶</strong></td>
+                        <td id='{"edaice-obj":"time"}'>2016/9-2016/12</td>
+                        <td><strong id='{"edaice-obj":"name"}'>AGV叉车无人驾驶</strong></td>
                     </tr>
                     <tr>
                         <td>
                             <table>
                                 <tbody>
-                                    <tr id='{"edaice-obj-item":"prodesc"}'>
+                                    <tr id='{"edaice-obj":"prodesc"}'>
                                         <td>项目描述：</td>
                                         <td>结合惯导器件实现AGV叉车室内导航，按规定路径进行工作。</td>
                                     </tr>
