@@ -23,7 +23,7 @@ class HtmlParser(object):
 
     def parseResume(self, parentNode, configJson, resumeData): # 根据配置文件对来源文件进行解析
         for i in configJson:
-            if 'path' in configJson[i]:
+            if 'path' in configJson[i] and (not i in resumeData):
                 resumeData[i] = {}
                 for item in parentNode.select(configJson[i]['path']):
                     if re.search(configJson[i]['reg'], item.text):
@@ -59,23 +59,25 @@ class HtmlParser(object):
             if not v.name: 
                 continue
             if v.children:
-                if 'id' in v.attrs and re.search('edaice-', v.attrs['id']):
-                    key = v.attrs['id'].split(":")[1][1:-2]
+                if 'yiren-obj' in v.attrs:
+                    info = json.loads(v.attrs['yiren-obj'])
+                    key = info['name']
                     path = self.getPath(v)
                     # regReference = [ i.text[:30] for i in self.templateSoup.select(path)[:5]]
                     obj[key] = {
                         'path':path,
                         'value':v.text[:30],
-                        'replace': "",
-                        'reg':"",
+                        'replace': info['replace'],
+                        'reg': info['reg'],
                         # 'regReference':"" if len(regReference)==1 else regReference,
                     }
                     self.buildConfig(v, obj[key])
                 else:
                     self.buildConfig(v, obj)
             else:
-                if 'id' in v.attrs and re.search('edaice-', v.attrs['id']):
-                    key = v.attrs['id'].split(":")[1][:-2]
+                if 'yiren-obj' in v.attrs:
+                    info = json.loads(v.attrs['yiren-obj'])
+                    key = info['name']
                     obj[key] = v.text
         return obj
         
@@ -83,7 +85,7 @@ class HtmlParser(object):
         path = node.name
         for i in node.parents:
 
-            if (i.name == '[document]') or ('id' in i.attrs and re.search('edaice-', i.attrs['id'])):
+            if (i.name == '[document]') or ('yiren-obj' in i.attrs):
                 return path
 
             identifier = self.getIdentifier(i)
@@ -95,7 +97,7 @@ class HtmlParser(object):
         return path
 
     def getIdentifier(self, node): # 获取节点的标识符
-        if 'id' in node.attrs and not re.search('edaice-', node.attrs['id']):
+        if 'id' in node.attrs:
             return '#' + node.attrs['id']
         elif 'class' in node.attrs:
             return node.name + '.' + '.'.join([x for x in node.attrs['class'] if x])

@@ -1,230 +1,254 @@
 {
     "summary": {
-        "value": "\n\n\n\n\n\n\n\n                      ",
-        "jobtitle": {
-            "value": "\n职　位：\n算法工程师\n",
-            "reg": "职　位",
-            "path": "tr td table tr td.tb2 table tbody tr tr",
-            "replace": ""
-        },
-        "company": {
-            "value": "\n公　司：\n智久机器人科技有限公司\n",
-            "reg": "公　司",
-            "path": "tr td table tr td.tb2 table tbody tr",
-            "replace": ""
-        },
-        "edu": {
-            "value": "\n学历/学位：\n硕士\n",
-            "reg": "学历",
-            "path": "tr td table tr td.tb2 table tr",
-            "replace": ""
-        },
         "industry": {
             "value": "\n行　业：\n仪器仪表/工业自动化\n",
+            "path": "tr td.tba table tr td.tb2 table tbody tr",
             "reg": "行　业",
-            "path": "tr td table tr td.tb2 table tbody tr",
-            "replace": ""
+            "replace": "行　业："
         },
-        "edutitle": {
-            "value": "\n专　业：\n自动化\n",
-            "reg": "专　业",
-            "path": "tr td table tr td.tb2 table tr",
-            "replace": ""
+        "value": "\n\n\n\n\n\n\n\n\n\n                    ",
+        "edu": {
+            "value": "\n学历/学位：\n硕士\n",
+            "path": "tr td.tba table tr td.tb2 table tr",
+            "reg": "学历",
+            "replace": "学历/学位："
         },
         "school": {
             "value": "\n学　校：\n广西科技大学\n",
+            "path": "tr td.tba table tr td.tb2 table tr",
             "reg": "学　校",
-            "path": "tr td table tr td.tb2 table tr",
-            "replace": ""
+            "replace": "学　校："
         },
-        "reg": "最近工作",
-        "path": "#divResume table.column tr td table.box2",
-        "replace": ""
-    },
-    "intention": {
-        "value": "\n\n求职意向\n\n\n\n\n\n\n\n\n\n期望薪资：\n10000-14",
-        "time": {
-            "value": "\n到岗时间：\n1周内\n",
-            "reg": "到岗时间",
+        "replace": "",
+        "company": {
+            "value": "\n公　司：\n智久机器人科技有限公司\n",
             "path": "tr td.tba table tr td.tb2 table tbody tr",
-            "replace": ""
+            "reg": "公　司",
+            "replace": "公　司："
         },
-        "ability": {
-            "value": "\n职能：\n嵌入式软件开发(Linux/单片机/PLC/DSP",
-            "reg": "职能",
-            "path": "tr td.tba table tr td.tb2 table tbody tr",
-            "replace": ""
+        "edutitle": {
+            "value": "\n专　业：\n自动化\n",
+            "path": "tr td.tba table tr td.tb2 table tr",
+            "reg": "专　业",
+            "replace": "专　业："
         },
-        "worktype": {
-            "value": "\n工作类型：\n全职\n",
-            "reg": "工作类型",
-            "path": "tr td.tba table tr td.tb2 table tbody tr",
-            "replace": ""
+        "path": "#divResume table.column tr td table",
+        "jobtitle": {
+            "value": "\n职　位：\n算法工程师\n",
+            "path": "tr td.tba table tr td.tb2 table tbody tr tr",
+            "reg": "职　位",
+            "replace": "职　位："
         },
-        "workcity": {
-            "value": "\n地点：\n深圳\n",
-            "reg": "地点",
-            "path": "tr td.tba table tr td.tb2 table tbody tr",
-            "replace": ""
-        },
-        "industry": {
-            "value": "\n行业：\n仪器仪表/工业自动化 电子技术/半导体/集成电路\n",
-            "reg": "行业",
-            "path": "tr td.tba table tr td.tb2 table tbody tr",
-            "replace": ""
-        },
-        "self": {
-            "value": "\n自我评价：\n做事认真，责任心强，严谨务实，以诚待人，具有较",
-            "reg": "自我评价",
-            "path": "tr td.tba table tr td.tb1 table tbody tr",
-            "replace": ""
-        },
-        "salary": {
-            "value": "\n期望薪资：\n10000-14999元/月\n",
-            "reg": "期望薪资",
-            "path": "tr td.tba table tr td.tb2 table tbody tr",
-            "replace": ""
-        },
-        "reg": "求职意向",
-        "path": "#divInfo td table",
-        "replace": ""
-    },
-    "projectexperience": {
-        "value": "\n\n项目经验\n\n\n\n\n\n\n\n\n2016/9-2016/12\n",
-        "breakpoint": {
-            "value": "\n\n2016/9-2016/12\nAGV叉车无人驾驶\n\n\n\n",
-            "name": {
-                "value": "AGV叉车无人驾驶",
-                "reg": "",
-                "path": "tr td.rtbox strong",
-                "replace": ""
-            },
-            "time": {
-                "value": "2016/9-2016/12",
-                "reg": "\\d{4}\/\\d{1}-",
-                "path": "tr td",
-                "replace": ""
-            },
-            "resdesc": {
-                "value": "\n责任描述：\n负责AGV叉车导航算法的研究及代码的编写\n",
-                "reg": "责任描述",
-                "path": "tr td.tb1 table tbody tr",
-                "replace": ""
-            },
-            "company": {
-                "value": "\n所属公司：\n智久机器人科技有限公司\n",
-                "reg": "所属公司",
-                "path": "tr td.tb1 table tbody tr",
-                "replace": ""
-            },
-            "prodesc": {
-                "value": "\n项目描述：\n结合惯导器件实现AGV叉车室内导航，按规定路径",
-                "reg": "项目描述",
-                "path": "tr td.tb1 table tbody tr",
-                "replace": ""
-            },
-            "reg": "项目描述",
-            "path": "tr td.tbb table tr td.p15 table",
-            "replace": ""
-        },
-        "reg": "项目经验",
-        "path": "#divInfo td table",
-        "replace": ""
-    },
-    "baseinfo": {
-        "value": "\n\n\n个人信息\n\n\n\n\n\n\n\n\n\n\n户口/国籍：\n常德\n\n\n",
-        "hunyin": {
-            "value": "\n婚姻状况：\n未婚\n",
-            "reg": "婚姻状况",
-            "path": "tbody tr td.tba table tbody tr td.tb2 table tbody tr",
-            "replace": ""
-        },
-        "hukou": {
-            "value": "\n户口/国籍：\n常德\n",
-            "reg": "户口",
-            "path": "tbody tr td.tba table tbody tr td.tb2 table tbody tr",
-            "replace": ""
-        },
-        "reg": "个人信息",
-        "path": "#divInfo td table",
-        "replace": ""
+        "reg": "最近工作"
     },
     "workexperience": {
         "value": "\n\n工作经验\n\n\n\n\n\n\n\n\n\n2016/9-2016/12",
+        "path": "#divInfo td table",
         "breakpoint": {
             "value": "\n\n\n2016/9-2016/12\n智久机器人科技有限公司\n",
-            "time": {
-                "value": "2016/9-2016/12",
-                "reg": "\\d{4}\/\\d{1}-",
-                "path": "tbody tr td",
-                "replace": ""
-            },
-            "jobtitle": {
-                "value": "\n工程部\n算法工程师\n",
-                "reg": "^((?!工作描述).)*$",
-                "path": "tbody tr",
-                "replace": ""
-            },
-            "company": {
-                "value": "智久机器人科技有限公司",
-                "reg": "公司",
-                "path": "tbody tr td.rtbox.plate_right span",
-                "replace": ""
-            },
+            "replace": "",
             "desc": {
                 "value": "\n工作描述：\n该项目主要由PC端、IMU惯性测量器件、主控M",
-                "reg": "工作描述",
                 "path": "tbody tr td.tb1 table tbody tr",
+                "reg": "工作描述",
+                "replace": "工作描述："
+            },
+            "time": {
+                "value": "2016/9-2016/12",
+                "path": "tbody tr td",
+                "reg": "\\d{4}/\\d{1}-",
                 "replace": ""
             },
             "info": {
                 "value": "\n\n仪器仪表/工业自动化|50-150人\n         ",
-                "reg": "\\|",
                 "path": "tbody tr",
+                "reg": "\\|",
                 "replace": ""
             },
-            "reg": "工作描述",
             "path": "tr td.tbb table tr td.p15 table",
-            "replace": ""
+            "company": {
+                "value": "智久机器人科技有限公司",
+                "path": "tbody tr td.rtbox.plate_right span",
+                "reg": "有限",
+                "replace": ""
+            },
+            "reg": "",
+            "jobtitle": {
+                "value": "\n工程部\n算法工程师\n",
+                "path": "tbody tr",
+                "reg": "^((?!工作描述).)*$",
+                "replace": ""
+            }
         },
         "reg": "工作经验",
-        "path": "#divInfo td table",
         "replace": ""
+    },
+    "baseinfo": {
+        "value": "\n\n\nID:984904708\n              ",
+        "resumeid": {
+            "value": "\nID:984904708\n                ",
+            "path": "tbody tr",
+            "reg": "ID:",
+            "replace": "ID:"
+        },
+        "replace": "",
+        "info": {
+            "value": "\n 男\n                          ",
+            "path": "tbody tr",
+            "reg": "",
+            "replace": ""
+        },
+        "path": "#divResume table.column tr td table.box1 tr td table",
+        "reg": "ID",
+        "workstatus": {
+            "value": " 目前正在找工作",
+            "path": "tbody tr td",
+            "reg": "",
+            "replace": ""
+        }
+    },
+    "personalinfo": {
+        "value": "\n\n\n个人信息\n\n\n\n\n\n\n\n\n\n\n户口/国籍：\n常德\n\n\n",
+        "hukou": {
+            "value": "\n户口/国籍：\n常德\n",
+            "path": "tbody tr td.tba table tbody tr td.tb2 table tbody tr",
+            "reg": "户口",
+            "replace": "户口/国籍："
+        },
+        "replace": "",
+        "hunyin": {
+            "value": "\n婚姻状况：\n未婚\n",
+            "path": "tbody tr td.tba table tbody tr td.tb2 table tbody tr",
+            "reg": "婚姻状况",
+            "replace": "婚姻状况："
+        },
+        "path": "#divInfo td table",
+        "reg": "个人信息"
     },
     "eduexperience": {
         "value": "\n\n\n教育经历\n\n\n\n\n\n\n\n\n\n2012/9-2015/6",
+        "path": "#divInfo td table",
         "breakpoint": {
             "value": "\n\n2012/9-2015/6\n广西科技大学\n\n\n硕士|自动",
+            "replace": "",
             "time": {
                 "value": "2012/9-2015/6",
-                "reg": "\\d{4}\/\\d{1}-",
                 "path": "tr td",
-                "replace": ""
-            },
-            "info": {
-                "value": "\n硕士|自动化\n",
-                "reg": "\\|",
-                "path": "tr",
-                "replace": ""
-            },
-            "desc": {
-                "value": "\n专业描述：\n专业课程：矩阵理论、随机过程、线性系统理论、智",
-                "reg": "专业描述",
-                "path": "tr td.tb1 table tbody tr",
+                "reg": "\\d{4}/\\d{1}-",
                 "replace": ""
             },
             "school": {
                 "value": "广西科技大学",
-                "reg": "大学|学院",
                 "path": "tr td.rtbox strong",
+                "reg": "大学|专科|学院",
                 "replace": ""
             },
-            "reg": "大学|学院",
             "path": "tbody tr td.tba table tbody tr td.p15 table",
-            "replace": ""
+            "desc": {
+                "value": "\n专业描述：\n专业课程：矩阵理论、随机过程、线性系统理论、智",
+                "path": "tr td.tb1 table tbody tr",
+                "reg": "专业描述",
+                "replace": "专业描述："
+            },
+            "reg": "",
+            "info": {
+                "value": "\n硕士|自动化\n",
+                "path": "tr",
+                "reg": "\\|",
+                "replace": ""
+            }
         },
         "reg": "教育经历",
+        "replace": ""
+    },
+    "intention": {
+        "industry": {
+            "value": "\n行业：\n仪器仪表/工业自动化 电子技术/半导体/集成电路\n",
+            "path": "tr td.tba table tr td.tb2 table tbody tr",
+            "reg": "行业：",
+            "replace": "行业"
+        },
+        "value": "\n\n求职意向\n\n\n\n\n\n\n\n\n\n期望薪资：\n10000-14",
+        "ability": {
+            "value": "\n职能：\n嵌入式软件开发(Linux/单片机/PLC/DSP",
+            "path": "tr td.tba table tr td.tb2 table tbody tr",
+            "reg": "职能",
+            "replace": "职能："
+        },
+        "worktype": {
+            "value": "\n工作类型：\n全职\n",
+            "path": "tr td.tba table tr td.tb2 table tbody tr",
+            "reg": "工作类型",
+            "replace": "工作类型："
+        },
+        "replace": "",
+        "workcity": {
+            "value": "\n地点：\n深圳\n",
+            "path": "tr td.tba table tr td.tb2 table tbody tr",
+            "reg": "地点",
+            "replace": "地点："
+        },
+        "time": {
+            "value": "\n到岗时间：\n1周内\n",
+            "path": "tr td.tba table tr td.tb2 table tbody tr",
+            "reg": "到岗时间",
+            "replace": "到岗时间："
+        },
+        "self": {
+            "value": "\n自我评价：\n做事认真，责任心强，严谨务实，以诚待人，具有较",
+            "path": "tr td.tba table tr td.tb1 table tbody tr",
+            "reg": "自我评价",
+            "replace": "自我评价："
+        },
         "path": "#divInfo td table",
+        "salary": {
+            "value": "\n期望薪资：\n10000-14999元/月\n",
+            "path": "tr td.tba table tr td.tb2 table tbody tr",
+            "reg": "期望薪资",
+            "replace": "期望薪资："
+        },
+        "reg": "求职意向"
+    },
+    "projectexperience": {
+        "value": "\n\n项目经验\n\n\n\n\n\n\n\n\n2016/9-2016/12\n",
+        "path": "#divInfo td table",
+        "breakpoint": {
+            "value": "\n\n2016/9-2016/12\nAGV叉车无人驾驶\n\n\n\n",
+            "name": {
+                "value": "AGV叉车无人驾驶",
+                "path": "tr td.rtbox strong",
+                "reg": "",
+                "replace": ""
+            },
+            "replace": "",
+            "time": {
+                "value": "2016/9-2016/12",
+                "path": "tr td",
+                "reg": "\\d{4}/\\d{1}-",
+                "replace": ""
+            },
+            "prodesc": {
+                "value": "\n项目描述：\n结合惯导器件实现AGV叉车室内导航，按规定路径",
+                "path": "tr td.tb1 table tbody tr",
+                "reg": "项目描述",
+                "replace": "项目描述："
+            },
+            "path": "tr td.tbb table tr td.p15 table",
+            "company": {
+                "value": "\n所属公司：\n智久机器人科技有限公司\n",
+                "path": "tr td.tb1 table tbody tr",
+                "reg": "所属公司",
+                "replace": "所属公司："
+            },
+            "reg": "",
+            "resdesc": {
+                "value": "\n责任描述：\n负责AGV叉车导航算法的研究及代码的编写\n",
+                "path": "tr td.tb1 table tbody tr",
+                "reg": "责任描述",
+                "replace": "责任描述："
+            }
+        },
+        "reg": "项目经验",
         "replace": ""
     }
 }
