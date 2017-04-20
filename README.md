@@ -2,8 +2,8 @@
 > 手动标记 提取简历数据
 
 # 目录结构
-```
-    config                              // 配置目录
+```json
+    config                              // 配置目录
         template                            // 模板文件夹
             job51.html                          // 模板文件
         job51.json                          // 生成的规则
@@ -26,7 +26,7 @@
     => 如： 工作经验有多个，此时需要标识从哪里作为分割点（注意：尽量放在与子节点不同的节点上） 
 
 * 节点标识例子：
-```
+```js
     <table yiren-obj='{"name":"summary", "reg":"最近工作", "replace":""}'>
         <tbody>
             <tr>
@@ -64,7 +64,7 @@
         }
     }
 ```
-```
+```js
     <table yiren-obj='{"name":"projectexperience", "reg":"项目经验", "replace":""}'>
         <tr>
             <td class="plate1">项目经验</td>
